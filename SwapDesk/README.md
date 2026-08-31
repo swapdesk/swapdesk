@@ -2,7 +2,19 @@
 
 **v0.1.27-alpha** | <https://github.com/swapdesk/swapdesk>
 
-Alpha status: this is early software, and it handles real swap flows
+A desktop app for swapping crypto without a custodian. It runs locally on
+Windows, macOS and Linux as a native window (no browser, no Electron, no
+server to host) and queries nine providers directly: Trocador,
+SideShift.ai, FixedFloat, 0x, ChangeNOW, Chainflip, StealthEX, THORChain and
+Maya Protocol. Every provider except 0x settles the output coin straight to an
+address you supply. SwapDesk
+itself never receives, holds or forwards funds; see
+[How the non-custodial design works](#how-the-non-custodial-design-works)
+for what that does and does not protect you from.
+
+### Alpha status and security disclosure
+
+This is early software, and it handles real swap flows
 against real providers. An independent source-code security review of an
 earlier release found no critical issues (it predates the Chainflip,
 THORChain and Maya providers); a follow-up cross-provider audit of those
@@ -24,16 +36,6 @@ remains available as an opt-out for headless use. Read
 swapping meaningful amounts. Bug reports welcome; for anything security-sensitive read
 [SECURITY.md](docs/SECURITY.md) first.
 
-A desktop app for swapping crypto without a custodian. It runs locally on
-Windows, macOS and Linux as a native window (no browser, no Electron, no
-server to host) and queries nine providers directly: Trocador,
-SideShift.ai, FixedFloat, 0x, ChangeNOW, Chainflip, StealthEX, THORChain and
-Maya Protocol. Every provider except 0x settles the output coin straight to an
-address you supply. SwapDesk
-itself never receives, holds or forwards funds; see
-[How the non-custodial design works](#how-the-non-custodial-design-works)
-for what that does and does not protect you from.
-
 Typical flow: enable at least one provider in Settings (they all ship off),
 pick `BTC -> XMR`, enter an amount and your Monero address, hit Get best
 rate, choose a provider, Create swap. You get a deposit address, send your
@@ -50,7 +52,7 @@ The only official source is <https://github.com/swapdesk/swapdesk>. Forks
 and mirrors are not vetted, and a build from one is not the build these
 checksums describe.
 
-- Compiled builds: <https://github.com/swapdesk/swapdesk/releases>
+- Compiled builds: coming soon <https://github.com/swapdesk/swapdesk/releases>
 - From source:
 
 ```bash
